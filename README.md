@@ -1,6 +1,6 @@
-# M5Stack Paper: E-Book reader
-This is a very simple prototype E-Book reader for the M5Stack Paper.                       
-https://shop.m5stack.com/products/m5paper-esp32-development-kit-v1-1-960x540-4-7-eink-display-235-ppi
+# M5Stack PaperS3: E-Book reader
+This is a very simple prototype E-Book reader for the M5Stack PaperS3.
+https://docs.m5stack.com/en/core/paperS3
 
 It comes with a small sample of the start of Robopocalypse as a test. It's worth a read, it's a good book.       
 If you like it, please support the author and buy the full book.                 
@@ -29,18 +29,7 @@ I've also coded it to be accessible to all devs - I've not split it out into cla
 1. A Micro SD card browser to select the book you want to read.
 2. A font changing option. Just remember the startIndex of the page, then re-parse the book page start/stop positions in the new font size, make a note of the page that coincides where startIndex is, and display that page. 
 3: A screen tap navigation option, to type the page number to go to.
-4: WiFi book upload/download. Reading place synchronisation between M5 Paper.
+4: WiFi book upload/download. Reading place synchronisation between M5 PaperS3.
 5: Support for Mobi, EPub... etc....
 6: Support for images, and page covers.
-
-**Program issues/situation_____**
-1. M5EPD.h doesn't expose TFT_eSPI's "fontHeight()" function, so it's hard coded for the current font. It could find this out by displaying two lines of text, and seeing what the canvas.getCursorY(); jumps to when the 2nd line's drawn.                 
-2. The program parses the book, finding where the start/stop character index of each page is when it first loads by keeping track of an xPos/yPos variable and measuring lines of text (that AREN'T actually rendered, just measured). This doesn't QUITE map to the display function, so the end of each page doesn't quite stop at the same place at the bottom of the page. It needs improving!
-
-
-<p align="center" width="100%">
-    <img width="33%" src="https://user-images.githubusercontent.com/1586332/131074409-0bc8815d-7d46-448b-8ae6-1407bf49db1f.jpg">
-</p>
-
-
 
